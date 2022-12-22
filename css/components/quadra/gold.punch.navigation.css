@@ -1,0 +1,70 @@
+
+/* --------------------------------------------------------------------------
+	-PUNCH NAVIGATION STYLESHEET-
+
+	Name: gold.punch.navigation.css
+	Project: Quadra
+	Written By: Goldeyes Themes - https://themeforest.net/user/goldeyes
+	Version: 1.0.0
+
+	Animated fullscreen navigation for Quadra Multi Concept HTML5 Theme
+	Special for Quadra users.
+-------------------------------------------------------------------------- */
+
+/* Punch navigation main options */
+	.punch-nav{display:flex;display:-ms-flexbox;width:100vw;height:100vh;overflow:hidden;left:0;top:0;opacity:0;visibility:hidden;pointer-events:none;position:fixed;z-index:3000;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition-delay:2s;}
+	/* Navigation Backdrop  */
+	.punch-nav-backdrop{position:absolute;opacity:0;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.75);backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-transition:opacity 0.6s;transition:opacity 0.6s;-webkit-transition-delay:0.6s;transition-delay:0.6s;}
+	/* Hide punch navigation if its not ready  */
+	body:not(.punch-nav-ready) .punch-nav, body:not(.punch-nav-ready) .punch-nav-backdrop{display:none!important;}
+	/* Container, row and cols of nav  */
+	.punch-nav [class^=container]{display:flex;display:-ms-flexbox;width:100%;height:100%;padding:0!important;}
+	.punch-nav .row{width:100%;height:100%;margin:0!important;}
+	.punch-nav .row .punch-nav-col{padding:0% 6%;min-height:100%;z-index:2;-webkit-transform:translate3d(0px,-100%,0px) translateZ(0); transform:translate3d(0px,-100%,0px) translateZ(0); backface-visibility:hidden;}
+/* When activated */
+	/* Cols drop to screen  */
+	.punch-nav.active{overflow-x:hidden;overflow-y:auto;pointer-events:auto;opacity:1;visibility:visible;transition-delay:0s;}
+	.punch-nav.active .punch-nav-backdrop{opacity:1;-webkit-transition-delay:0s;transition-delay:0s;}
+	.punch-nav.active .row .punch-nav-col{-webkit-transform:translate3d(0px,0%,0px) translateZ(0); transform:translate3d(0px,0%,0px) translateZ(0);}
+/* Mobile Support */
+		@media only screen and (max-width:992px){
+			.punch-nav [class^=container],.punch-nav .row,.punch-nav .row .punch-nav-col{height:auto!important;min-height:auto;}
+			.punch-nav-backdrop{display:none!important}
+			.punch-nav .row .punch-nav-col{opacity:0;-webkit-transform:translate3d(0px,0%,0px) translateZ(0)!important; transform:translate3d(0px,0%,0px) translateZ(0)!important;-webkit-transition:opacity 0.4s cubic-bezier(0.77, 0, 0.2, 1) 0s !important;transition:opacity 0.4s cubic-bezier(0.77, 0, 0.2, 1) 0s !important;}
+			.punch-nav.active .row .punch-nav-col{opacity:1!important;}
+		}
+/* Animated Items */
+	.punch-nav .animate{visibility:hidden;-webkit-animation-duration:0.6s;animation-duration:0.6s;-webkit-transition:visibility 0.6s, opacity 0.6s;transition:visibility 0.6s, opacity 0.6s;}
+	.punch-nav .animate.visible{visibility:visible;}
+	.punch-nav .animate.fading-out,.punch-nav:not(.active) .animate{opacity:0!important;}
+/* Column delays */
+	/* Column out delays */
+	.punch-nav .row .punch-nav-col:nth-of-type(1){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.0s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(2){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.07s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(3){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.14s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(4){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.21s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(5){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.28s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(6){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.35s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(7){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.42s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(8){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.49s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(9){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.56s;}
+	.punch-nav .row .punch-nav-col:nth-of-type(10){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.63s;}
+	/* Column in delays */
+	.punch-nav.active .row .punch-nav-col:nth-of-type(1){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.4s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(2){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.5s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(3){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.6s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(4){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.7s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(5){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.8s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(6){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.9s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(7){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.10s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(8){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.11s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(9){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.12s;}
+	.punch-nav.active .row .punch-nav-col:nth-of-type(10){transition:transform 0.6s cubic-bezier(0.77, 0, 0.2, 1) 0.13s;}
+/* Trigger on modern nav */
+	.modern-nav .punch-nav-trigger{display:-ms-flexbox;display:flex;position:relative;right:0;padding:0 25px;height:100%;cursor:pointer;margin-left: auto;}
+	
+
+
+
+
+

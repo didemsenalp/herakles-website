@@ -1,0 +1,141 @@
+
+/* ==============================================
+	WEBSITE SELECTION COLORS
+============================================== */
+
+	::selection{color:white;background-color:#363636;}
+
+/* ==============================================
+	TEXT COLORS
+============================================== */
+
+	/* Colored */
+	.colored,.colored-hover:hover,.colored-active.active,
+	.plyr--full-ui input[type=range],
+	.modern-nav.link-hover-01 .nav-container .nav-menu .nav-links li:not(.extra-links):hover>a.nav-link,
+	.modern-nav.link-hover-01 .nav-container li.extra-links>a.nav-link:hover,
+	.modern-nav.link-hover-01 .nav-container li.active>a.nav-link,
+	.modern-nav.link-hover-01 .nav-container li>a.nav-link.active{
+		color:#C26165 !important;
+	}
+	/* Colored1 */
+	.colored1,.colored1-hover:hover,.colored1-active.active{
+		color:#E1DBD2 !important;
+	}
+	/* Colored2 */
+	.colored2,.colored2-hover:hover,.colored2-active.active{
+		color:#575050 !important;
+	}
+
+/* ==============================================
+	BACKGROUND COLORS
+============================================== */
+
+	/* bg-colored */
+	.bg-colored,.bg-colored-hover:hover,.bg-colored-active.active,.bg-colored-hover-trigger:hover .bg-colored-hover-target,
+	.modern-nav .nav-links .nav-link:before,
+	.irs-from, .irs-to, .irs-single, .irs-line-left, .irs-line-mid, .irs-line-right,
+	.dots-colored-active:not(.dots-circle) .slick-dots li.slick-active:before,
+	.plyr__control--overlaid,
+	.plyr__volume .plyr__control:hover,
+	.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true],
+	.twentytwenty-handle:active,
+	.underline-slide.underline-colored:before,.underline-slide.underline-colored:after{
+		background-color:#C26165 !important;
+	}
+	/* bg-colored1 */
+	.bg-colored1,.bg-colored1-hover:hover,.bg-colored1-active.active,.bg-colored1-hover-trigger:hover .bg-colored1-hover-target{
+		background-color:#E1DBD2 !important;
+	}
+	/* bg-colored2 */
+	.bg-colored2,.bg-colored2-hover:hover,.bg-colored2-active.active,.bg-colored1-hover-trigger:hover .bg-colored1-hover-target{
+		background-color:#575050 !important;
+	}
+	/* Soft backgrounds - colored Tones */
+	.bg-soft-colored:before,.bg-soft-colored-hover:hover:before,.bg-soft-colored-active.active:before,.bg-soft-colored9:before,.bg-soft-colored9-hover:hover:before,.bg-soft-colored9-active.active:before{background-color:rgba(194,97,101,0.9);}
+	.bg-soft-colored1:before,.bg-soft-colored1-hover:hover:before,.bg-soft-colored1-active.active:before{background-color:rgba(194,97,101,0.1);}
+	.bg-soft-colored2:before,.bg-soft-colored2-hover:hover:before,.bg-soft-colored2-active.active:before{background-color:rgba(194,97,101,0.2);}
+	.bg-soft-colored3:before,.bg-soft-colored3-hover:hover:before,.bg-soft-colored3-active.active:before{background-color:rgba(194,97,101,0.3);}
+	.bg-soft-colored4:before,.bg-soft-colored4-hover:hover:before,.bg-soft-colored4-active.active:before{background-color:rgba(194,97,101,0.4);}
+	.bg-soft-colored5:before,.bg-soft-colored5-hover:hover:before,.bg-soft-colored5-active.active:before{background-color:rgba(194,97,101,0.5);}
+	.bg-soft-colored6:before,.bg-soft-colored6-hover:hover:before,.bg-soft-colored6-active.active:before{background-color:rgba(194,97,101,0.6);}
+	.bg-soft-colored7:before,.bg-soft-colored7-hover:hover:before,.bg-soft-colored7-active.active:before{background-color:rgba(194,97,101,0.7);}
+	.bg-soft-colored8:before,.bg-soft-colored8-hover:hover:before,.bg-soft-colored8-active.active:before{background-color:rgba(194,97,101,0.8);}
+	.bg-soft-colored10:before,.bg-soft-colored10-hover:hover:before,.bg-soft-colored10-active.active:before{background-color:rgba(194,97,101,1);}
+
+/* ==============================================
+	BORDER COLORS
+============================================== */
+
+	/* b-colored */
+	.b-colored,.b-colored-hover:hover,.b-colored-active.active,
+	.strip-timeline .dates div:hover:after, .strip-timeline .dates div.active:after,
+	.interactive-packages .selector{
+		border-color:#C26165 !important;
+	}
+	/* b-colored1 */
+	.b-colored1,.b-colored1-hover:hover,.b-colored1-active.active{
+		border-color:#E1DBD2 !important;
+	}
+	/* b-colored2 */
+	.b-colored2,.b-colored2-hover:hover,.b-colored2-active.active{
+		border-color:#575050 !important;
+	}
+
+/* ==============================================
+	SVG COLORS
+============================================== */
+
+/* Fills */
+	/* fill-colored */
+	.fill-colored,.fill-colored-hover:hover,.fill-colored-active.active{
+		fill:#C26165 !important;
+	}
+	/* fill-colored1 */
+	.fill-colored1,.fill-colored1-hover:hover,.fill-colored1-active.active{
+		fill:#E1DBD2 !important;
+	}
+	/* fill-colored2 */
+	.fill-colored2,.fill-colored2-hover:hover,.fill-colored2-active.active{
+		fill:#575050 !important;
+	}
+
+/* Strokes */
+	/* stroke-colored */
+	.stroke-colored,.stroke-colored-hover:hover,.stroke-colored-active.active{
+		stroke:#C26165 !important;
+	}
+	/* stroke-colored1 */
+	.stroke-colored1,.stroke-colored1-hover:hover,.stroke-colored1-active.active{
+		stroke:#E1DBD2 !important;
+	}
+	/* stroke-colored2 */
+	.stroke-colored2,.stroke-colored2-hover:hover,.stroke-colored2-active.active{
+		stroke:#575050 !important;
+	}
+
+/* ==============================================
+	GRADIENT BACKGROUNDS
+============================================== */
+
+	/* bg-gradient, hover, active, bg-soft-gradient */
+	.bg-soft-gradient:before,.bg-gradient,.bg-gradient-hover:hover,.bg-gradient-active.active{
+		background-image: #D57B80 !important; background-image: linear-gradient(-90deg, #D57B80 0%, #C26165 100%) !important;
+	}
+	/* bg-gradient1, hover, active, bg-soft-gradient1 */
+	.bg-soft-gradient1:before,.bg-gradient1,.bg-gradient1-hover:hover,.bg-gradient1-active.active{
+		background-image: #EAE4DB !important; background-image: linear-gradient(90deg, #EAE4DB 0%, #F2EEE8 100%) !important;
+	}
+	/* bg-gradient2, hover, active, bg-soft-gradient2 */
+	.bg-soft-gradient2:before,.bg-gradient2,.bg-gradient2-hover:hover,.bg-gradient2-active.active{
+		background-image: #6C56DA !important; background-image: linear-gradient(-90deg, #6C56DA 0%, #8C7AE6 100%) !important;
+	}
+	/* bg-gradient3, hover, active, bg-soft-gradient3 */
+	.bg-soft-gradient3:before{ opacity: 0.92;}
+	.bg-soft-gradient3:before,.bg-gradient3,.bg-gradient3-hover:hover,.bg-gradient3-active.active{
+		background-image: #7CD8AC !important; background-image: linear-gradient(-90deg, #7CD8AC 0%, #57AF82 100%) !important;
+	}
+	/* bg-gradient4, hover, active, bg-soft-gradient4 */
+	.bg-soft-gradient4:before,.bg-gradient4,.bg-gradient4-hover:hover,.bg-gradient4-active.active{
+		background-image: #131313 !important; background-image: linear-gradient(45deg,  #131313 0%,#282828 100%) !important;
+	}

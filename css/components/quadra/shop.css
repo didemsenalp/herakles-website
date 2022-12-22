@@ -1,0 +1,49 @@
+
+/* --------------------------------------------------------------------------
+	-QUADRA BLOG STYLESHEET-
+
+	Name: shop.css
+	Project: Quadra
+	Written By: Goldeyes Themes - (https://themeforest.net/user/goldeyes)
+	Version: 1.0.0
+
+	Stylesheet for shop templates of Quadra Multi Concept HTML5 Theme
+	Special for Quadra users.
+-------------------------------------------------------------------------- */
+
+/* ==============================================
+	SHOP CART
+============================================== */
+	/* Cart main styles */
+	.cart{ position: fixed; top:0; overflow: scroll; right: 0; z-index: 2500; width:70%; height:100vh; max-width:650px; background-color:white; -webkit-transform:translateX(100%) translateZ(0);transform:translateX(100%) translateZ(0); -webkit-transition:all 0.4s cubic-bezier(1, 0.45, 0.54, 0.8) 0s;transition:all 0.4s cubic-bezier(1, 0.45, 0.54, 0.8) 0s;}
+	/* Cart items container */
+	.cart-keeper{ overflow:auto; }
+	/* Backdrop styles */
+	.cart-backdrop{ position: fixed; left:0; top:0; width: 100vw; height: 100vh; z-index: 2400; background-color: rgba(13,13,13,0.2); pointer-events: none; visibility: hidden; opacity: 0; -webkit-transition:all 0.5s 0.3s; transition:all 0.5s 0.3s; }
+	/* Cart when active */
+	.cart.active{-webkit-transform:translateX(0%) translateZ(0);transform:translateX(0%) translateZ(0); -webkit-transition:all 0.5s cubic-bezier(0.55, 0, 0.2, 1) 0.3s;transition:all 0.5s cubic-bezier(0.55, 0, 0.2, 1) 0.3s; }
+	/* Backdrop when cart active */
+	.cart-backdrop.active{ pointer-events: all; visibility: visible; opacity: 1; -webkit-transition-delay:0s; transition-delay:0s; }
+	/* Disable quantity arrow icons on cart */
+    .quantity input.numbers::-webkit-inner-spin-button, .quantity input.numbers::-webkit-outer-spin-button{-webkit-appearance:none;}
+    /* Checkbox and radios */
+    input.check + label span.checked{opacity:0; visibility: hidden;}
+    input.check:checked + label span.checked{opacity:1; visibility: visible;}
+    input.check:checked + label span.text{color:white!important;}
+
+/* ==============================================
+	HIDDEN CREDIT CARD FORM - in the shop-checkout.html
+============================================== */
+
+	/* Section animation */
+	.credit-card-section{max-height:55px; overflow:hidden; position: relative; -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.2, 1); transition: all 0.6s cubic-bezier(0.77, 0, 0.2, 1);}
+	.credit-card-section.active{max-height: 450px;}
+	/* Animation styles for inner elements */
+	.credit-card-section .credit-card-form>*{visibility: hidden; opacity: 0; -webkit-transition: all 1.2s cubic-bezier(0.77, 0, 0.2, 1); transition: all 1.2s cubic-bezier(0.77, 0, 0.2, 1); -webkit-transform: translateY(20px) translateZ(0); transform: translateY(20px) translateZ(0);}
+	.credit-card-section.active .credit-card-form>*{visibility: visible; opacity: 1; -webkit-transform: translateY(0px) translateZ(0); transform: translateY(0px) translateZ(0);}
+	/* Animation timings of elements in credit card section */
+	.credit-card-section .credit-card-form>*:nth-of-type(1){ -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+	.credit-card-section .credit-card-form>*:nth-of-type(2){ -webkit-transition-delay: 0.15s; transition-delay: 0.15s; }
+	.credit-card-section .credit-card-form>*:nth-of-type(3){ -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
+	.credit-card-section .credit-card-form>*:nth-of-type(4){ -webkit-transition-delay: 0.25s; transition-delay: 0.25s; }
+	.credit-card-section .credit-card-form>*:nth-of-type(5){ -webkit-transition-delay: 0.3s; transition-delay: 0.3s; }

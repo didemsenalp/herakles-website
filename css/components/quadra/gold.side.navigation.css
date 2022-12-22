@@ -1,0 +1,162 @@
+
+/* --------------------------------------------------------------------------
+	-SIDE NAVIGATION STYLESHEET-
+
+	Name: gold.side.navigation.css
+	Project: Quadra
+	Written By: Goldeyes Themes - https://themeforest.net/user/goldeyes
+	Version: 1.0.0
+
+	Side & mini side navigation for Quadra Multi Concept HTML5 Theme
+	Special for Quadra users.
+-------------------------------------------------------------------------- */
+
+/* Side navigation main options */
+	.side-nav{width:330px;padding:0;position:fixed;left:0;top:0;height:100vh;z-index:2000;overflow-x:hidden;overflow-y:auto;-webkit-transform:translateZ(0);transform:translateZ(0);display:flex;display:-ms-flexbox;flex-direction:column;-ms-flex-direction:column;}
+	.side-nav .logo{width:100%;padding:50px 30px 0 50px;height:auto;display:flex;display:-ms-flexbox;}
+	.side-nav:not(.readyToUse){-webkit-transition:all 0s!important;transition:all 0s!important;-webkit-transition-delay:0s!important;transition-delay:0s!important;}
+/* Nav Menu */
+	.side-nav .nav-menu{line-height:normal;}
+	.side-nav .nav-menu ul{flex-direction:column;-ms-flex-direction:column;}
+	.side-nav .nav-menu ul, .side-nav .nav-menu ul li, .side-nav .nav-menu ul li a{display: flex;display:-ms-flexbox;align-items:center;-ms-flex-align:center;flex-wrap:wrap;-ms-flex-wrap:wrap;width:100%;}
+	.side-nav .nav-menu ul li a{padding:12px 50px 12px 50px;position:relative;-webkit-transition:all 0.21s, padding 0s, font-size 0s;transition:all 0.21s, padding 0s, font-size 0s;}
+	.side-nav.links-sm .nav-menu ul li a{padding-top:9px;padding-bottom:9px;}
+	.side-nav.links-md .nav-menu ul li a{padding-top:14px;padding-bottom:14px;}
+	.side-nav.links-lg .nav-menu ul li a{padding-top:16px;padding-bottom:16px;}
+	.side-nav.links-xl .nav-menu ul li a{padding-top:19px;padding-bottom:19px;}
+	.side-nav .nav-menu ul li a p{width:100%;}
+/* Bordered Links */
+	.side-nav.links-bordered .nav-menu ul li a{border-bottom:1px solid rgba(140,140,140,0.15);}
+	.side-nav.links-bordered .nav-menu ul.nav>li:last-child a{border-bottom:none;}
+/* Hover Styles */
+	.side-nav.link-hover-01 .nav-menu>ul>li>a:before{content:'';opacity:0;position:absolute;top:0;left:0;height:100%;width:3px;background-color:#333;display:block;-webkit-transition:inherit;transition:inherit;}
+	.side-nav.link-hover-01 .nav-menu ul li a:hover:before,
+	.side-nav.link-hover-01 .nav-menu ul li.active>a:before,
+	.side-nav.link-hover-01 .nav-menu ul li a.active:before,
+	.side-nav.link-hover-01 .nav-menu ul li a:hover{opacity:1;}
+/* Hover Style 2 */
+	.side-nav.link-hover-02 .nav-menu:hover ul li a{opacity:.74;}
+	.side-nav.link-hover-02 .nav-menu:hover ul li a:hover{opacity:1;}
+	/* Hover Style 2 */
+	.side-nav.link-hover-03 .nav-menu ul li a:hover,
+	.side-nav.link-hover-03 .nav-menu ul li a.active,
+	.side-nav.link-hover-03 .nav-menu ul li.active>a{background-color:rgba(140,140,140,0.1);}
+/* Dropdown Menu */
+	.side-nav .nav-menu ul li ul.dropdown-menu{padding:0 0 0 10px;background-color:transparent;color:inherit;position:relative;display:none;font-size:inherit;border:none;}
+	.side-nav .nav-menu>ul>li>ul.dropdown-menu a{padding-top:10px;padding-bottom:10px;}
+/* Animation for dropdown links */
+	.side-nav .nav-menu ul li ul.dropdown-menu>li{opacity:0;-webkit-transform:translate3d(-10px,0px,0px);transform:translate3d(-10px,0px,0px);-webkit-transition:all 0.35s;transition:all 0.35s;-webkit-transition-delay:0.15s;transition-delay:0.15s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu.showing>li{opacity:1;-webkit-transform:translate3d(0px,0px,0px);transform:translate3d(0px,0px,0px);}
+	/* Delays for dropdown animations */
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(1){-webkit-transition-delay:0.35s;transition-delay:0.15s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(2){-webkit-transition-delay:0.4s;transition-delay:0.2s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(3){-webkit-transition-delay:0.45s;transition-delay:0.25s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(4){-webkit-transition-delay:0.5s;transition-delay:0.3s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(5){-webkit-transition-delay:0.55s;transition-delay:0.35s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(6){-webkit-transition-delay:0.6s;transition-delay:0.4s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(7){-webkit-transition-delay:0.65s;transition-delay:0.45s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(8){-webkit-transition-delay:0.7s;transition-delay:0.5s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(9){-webkit-transition-delay:0.75s;transition-delay:0.55s;}
+	.side-nav .nav-menu ul li ul.dropdown-menu>li:nth-of-type(10){-webkit-transition-delay:0.8s;transition-delay:0.6s;}
+/* Has sub menu icon */
+	.side-nav li.dd-toggle>a:after{content:"\e64b";font-family:'themify';font-size:11px;opacity:1;border:none;vertical-align:0;position:absolute;right:50px;top:0;height:100%;display:inline-flex;display:-ms-inline-flexbox;align-items:center;-ms-flex-align:center;-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:transform 0.22s;transition:transform 0.22s;}
+	.side-nav li.dd-toggle>a.active:after{-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+/* Bottom Fixed Details */
+	.side-nav .bottom-details{padding-top:30px;position:relative;bottom:0;left:0;width:100%;z-index: 5;}
+	.side-nav .bottom-details .bottom-content{padding:50px;}
+
+
+
+/* ============================================================ */
+/* Mini Side navigation main options
+/* ============================================================ */
+
+	/* Main options */
+	.mini-side-nav{width:80px;position:fixed;padding:0;left:0;top:0;height:100vh;z-index:2000;-webkit-transform:translateZ(0);transform:translateZ(0);display:flex;display:-ms-flexbox;flex-direction:column;-ms-flex-direction:column;}
+	.mini-side-nav .nav-menu ul, .mini-side-nav .nav-menu ul li, .mini-side-nav .nav-menu ul li a{display:flex;display:-ms-flexbox;align-items:center;-ms-flex-align:center;flex-wrap:wrap;-ms-flex-wrap:wrap;width:100%;justify-content:center;-ms-flex-pack:center;}
+
+	/* Backdrop */
+	.mini-side-nav-backdrop{display:none;position:fixed;z-index:1999;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.16);}
+	/* Transparent Version */
+	.mini-side-nav.bg-transparent{position:absolute;}
+
+	/* Popovers */
+	.mini-side-nav .popover{color:#525252;border:none;outline:none;padding:0;min-width:1px;line-height:normal;width:auto;white-space:nowrap;max-width:none;background:none!important;box-shadow:none!important;}
+	.mini-side-nav .popover .popover-header{color:inherit;text-transform:uppercase;font-size:11px;font-weight:700;background-color:#fff;padding:8px 30px;border:none;border-radius:30px;-webkit-transform:scale(0.9) translateZ(0);transform:scale(0.9) translateZ(0);-webkit-transition:all 0.2s;transition:all 0.2s;}
+	.mini-side-nav .popover.show .popover-header{-webkit-transform:scale(1);transform:scale(1);}
+	.mini-side-nav .popover .popover-body{display:none;}
+	.mini-side-nav .popover.right{margin-left:14px;}
+	.mini-side-nav .popover .popover-arrow{display:none!important;}
+	/* Dark Popovers */
+	.mini-side-nav.popovers-dark .popover{color:#d4d4d4;}
+	.mini-side-nav.popovers-dark .popover .popover-header{background-color:#0d0d0d;}
+
+		@media only screen and (max-height:500px){
+			.mini-side-nav{overflow-y: auto;}
+			.mini-side-nav .popover{display: none !important;}
+		}
+
+
+/* ============================================================ */
+/* Main Section Spaces
+/* ============================================================ */
+/* Main section options */
+	/* if has side nav */
+	main.has-sidenav,body.has-side-nav>main{padding-left:330px;}
+	/* if has mini side nav */
+	main.has-mini-sidenav,body.has-mini-side-nav>main{padding-left:80px;}
+
+
+
+/* ============================================================ */
+/* IF you use both navs - you can remove these codes if you don't
+/* ============================================================ */
+
+	/* Mini Side nav width */
+	body.has-side-nav .mini-side-nav{width:70px;}
+	/* Side nav width */
+	body.has-mini-side-nav .side-nav{width:280px;margin-left:70px;z-index:1999;}
+	/* Main section padding */
+	main.has-side-nav.has-mini-side-nav,body.has-side-nav.has-mini-side-nav main{padding-left:350px;}
+
+/* ============================================================ */
+/* Responsive Navs
+/* ============================================================ */
+
+	/* Side Nav On MD Screens */
+		@media only screen and (max-width:1200px){
+			/* Maximum width 270px */
+			.side-nav{width:270px;}
+			/* Mini Side Nav */
+			.mini-side-nav{width:60px;}
+			/* if has side nav */
+			main.has-sidenav,body.has-side-nav>main{padding-left:270px;}
+			/* if has mini side nav */
+			main.has-mini-side-nav,body.has-mini-side-nav main{padding-left:60px;}
+			/* if has both */
+			body.has-side-nav .mini-side-nav{width:50px;}
+			body.has-mini-side-nav .side-nav{width:260px;margin-left:50px;}
+			body.has-side-nav.has-mini-side-nav>main{padding-left:310px;}
+		}
+	/* Side Nav Mobile */
+		@media only screen and (max-width:992px){
+			/* top navigation for side nav trigger and logo */
+			.mobile-side-nav{width:100%;height:70px;z-index:1000;}
+			body.has-mini-side-nav .mobile-side-nav{width:calc(100% - 50px);margin-left:50px;}
+			/* Backdrop of side nav */
+			.mobile-side-nav-backdrop{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.16);cursor:pointer;}
+			.side-nav{opacity:0;pointer-events:none;-webkit-transform:translate3d(-100%,0px,0px);transform:translate3d(-100%,0px,0px);-webkit-transition:opacity 0.5s cubic-bezier(0.77, 0, 0.2, 1) 0.3s, transform 0.5s cubic-bezier(0.77, 0, 0.2, 1);transition:opacity 0.5s cubic-bezier(0.77, 0, 0.2, 1) 0.3s, transform 0.5s cubic-bezier(0.77, 0, 0.2, 1);}
+			.side-nav.active{opacity:1;pointer-events:auto;-webkit-transform:translate3d(0%,0px,0px);transform:translate3d(0%,0px,0px);-webkit-transition:opacity 0.5s cubic-bezier(0.77, 0, 0.2, 1), transform 0.5s cubic-bezier(0.77, 0, 0.2, 1);transition:opacity 0.5s cubic-bezier(0.77, 0, 0.2, 1), transform 0.5s cubic-bezier(0.77, 0, 0.2, 1);}
+			main.has-sidenav,body.has-side-nav>main{padding-left:0px;}
+			main.has-mini-side-nav,body.has-mini-side-nav main{padding-left:50px;}
+			/* And all 50px spaces turns to 30px */
+			.side-nav .logo{width:100%;padding:30px 30px 0 30px;}
+			.side-nav .nav-menu ul li a{padding:12px 30px 12px 30px;}
+			.side-nav li.dd-toggle>a:after{right:30px;}
+			.side-nav .bottom-details .bottom-content{padding:30px;}
+			/* Mini Side Nav */
+			.mini-side-nav{width:50px;}
+			/* if has both */
+			body.has-mini-side-nav .side-nav{margin-left:50px;}
+			body.has-side-nav.has-mini-side-nav>main{padding-left:50px;}
+		}
