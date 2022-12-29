@@ -93,7 +93,7 @@
             }
             $(window).on("scroll", function(){ showHideExtraNav(); });
 
-            //Detect window height changes and refresh parallax and light gallery for portfolios 
+            //Detect window height changes and refresh parallax and light gallery for portfolios
             detectWindowHeightChange(document.body, function(){
                 //Animated Items
                 Waypoint.refreshAll();
@@ -590,7 +590,7 @@ $(window).on('load', function() {
             });
         }
 
-    //Detect window height changes and refresh light gallery for portfolios 
+    //Detect window height changes and refresh light gallery for portfolios
         detectWindowHeightChange(document.body, function(){
             if ($(".cbp-item:last-child").hasClass("cbp-item-loading")) {
                 if ($(".lightbox_gallery").exists()) { $(".lightbox_gallery").data('lightGallery').destroy(true); $(window).callLightboxGallery(); }
@@ -847,11 +847,13 @@ $(window).on('load', function() {
                 $(".verify-input").attr("placeholder", rnuma + "+" + rnumb + "= ?");
             }
         });
-        var validator = $('.validate-me');
+        var validator = $('');
 
         //If contact form is not visible
         $(validator).each(function() {
                var elem = $(this);
+               console.log($(elem).attr('name'));
+
                if ($(elem).attr('name') !== 'quick_form' && !$(validator).parents('.modal').length ) {
                     $(elem).waypoint(function(direction) {
                          $( elem ).toggleClass('invisibleForm');
@@ -860,7 +862,7 @@ $(window).on('load', function() {
         });
 
 
-   
+
 
         //Input Animation
         $(".label-animation .input").each(function(){
