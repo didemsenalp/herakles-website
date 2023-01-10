@@ -29,7 +29,8 @@ const contactFormSchema = new mongoose.Schema({
   email: String,
   message: String,
   currentDate: Date,
-  currentDateString: String
+  currentDateString: String,
+  düzenle: String
 });
 
 const ContactFormTable = mongoose.model("ContactFormTable", contactFormSchema);
@@ -59,6 +60,7 @@ app.get("/data-table-view", function(req, res) {
 
 app.post('/contact', (req, res) => {
 
+
   const day = date.getDate();
   const dayString = date.getDateAsString();
 
@@ -68,12 +70,25 @@ app.post('/contact', (req, res) => {
     phone: req.body.phone,
     email: req.body.email1,
     message: req.body.message1,
+    düzenle: req.body.düzenle,
     currentDate: day,
     currentDateString: dayString
 
   });
   contactFormInfo.save();
   res.redirect("/");
+
+});
+
+app.post("/delete", function(req, res) {
+  const checkedItemId = req.body.checkbox;
+  const listName = req.body.listName;
+
+    ContactFormTable.findByIdAndRemove(checkedItemId, function(err) {
+        console.log("Successfully deleted checked item.");
+        res.redirect("/data-table-view");
+    });
+
 
 });
 
