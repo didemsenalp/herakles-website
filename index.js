@@ -30,7 +30,7 @@ const contactFormSchema = new mongoose.Schema({
   message: String,
   currentDate: Date,
   currentDateString: String,
-  düzenle: String
+  reformdate: Date
 });
 
 const ContactFormTable = mongoose.model("ContactFormTable", contactFormSchema);
@@ -70,7 +70,7 @@ app.post('/contact', (req, res) => {
     phone: req.body.phone,
     email: req.body.email1,
     message: req.body.message1,
-    düzenle: req.body.düzenle,
+    reformdate: req.body.reformdate,
     currentDate: day,
     currentDateString: dayString
 
@@ -80,14 +80,19 @@ app.post('/contact', (req, res) => {
 
 });
 
-app.post("/delete", function(req, res) {
-  const checkedItemId = req.body.checkbox;
-  const listName = req.body.listName;
+app.post("/update", function(req, res) {
+  const day = date.getDate();
+  const dayString = date.getDateAsString();
 
-    ContactFormTable.findByIdAndRemove(checkedItemId, function(err) {
+  const currentDateString= dayString;
+  const reformdate = req.body.reformdate;
+  console.log(reformdate);
+
+    const contactReform = ContactFormTable.findOne(reformdate, function(err) {
         console.log("Successfully deleted checked item.");
         res.redirect("/data-table-view");
     });
+    contactReform.save();
 
 
 });

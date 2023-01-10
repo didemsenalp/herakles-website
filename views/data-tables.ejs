@@ -945,10 +945,10 @@
             <tr>
               <th>Date</th>
               <th>Name</th>
-              <th>Email</th>
+              <th>E-mail</th>
               <th>Phone</th>
               <th>Message</th>
-              <th>Düzenle</th>
+              <th>Reform Date</th>
             </tr>
           </thead>
           <tbody>
@@ -959,11 +959,11 @@
               <th> <%= contact.email %> </th>
               <th> <%= contact.phone %> </th>
               <th> <%= contact.message %> </th>
-              <th> <%= contact.düzenle %>
-                <form action="/delete" method="post">
+              <th> <%= contact.reformdate %>
+                <form action="/update" method="post">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
+                    Güncelle
                   </button>
 
                   <!-- Modal -->
@@ -971,17 +971,17 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Geri Dönüş</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
-                          <input type="checkbox" name="checkbox" value="<%=contact._id%>" onChange="this.form.submit()">
+                          <input type="date" name="reformdate" value="<%=contact._id%>">
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" name="reformdate" value="<%= contact.reformdate %>" class="btn btn-primary">Save changes</button>
                         </div>
                       </div>
                     </div>
