@@ -960,14 +960,14 @@
               <th> <%= contact.phone %> </th>
               <th> <%= contact.message %> </th>
               <th> <%= contact.reformdate %>
-                <form action="/update" method="post">
+                <form id="form_<%= contact._id %>" action="/update" method="post">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_<%= contact._id %>">
                     Güncelle
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="modal_<%= contact._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -977,11 +977,13 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          <input type="date" name="reformdate" value="<%=contact._id%>">
+                          <input type="date" name="reformdate" value="<%=contact.reformdate%>">
+                          <input type="text" name="name" value="<%=contact.name%>">
+                          <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
                         </div>
                         <div class="modal-footer">
                           <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" name="reformdate" value="<%= contact.reformdate %>" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                       </div>
                     </div>
@@ -1182,6 +1184,7 @@
 
   <!-- THEME PANEL - you can remove this area The panel loading after window load for better performance. -->
   <script>
+
     $(document).ready(function() {
       'use strict'
       setTimeout(function() {

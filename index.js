@@ -51,7 +51,6 @@ app.get("/data-table-view", function(req, res) {
     res.render("data-tables", {
       contactList: foundContactList
     });
-    res.sendFile(__dirname + "/elements-data-tables.html");
   }).sort({name: 1});
 
 
@@ -66,6 +65,7 @@ app.post('/contact', (req, res) => {
 
 
   const contactFormInfo = new ContactFormTable({
+    _id: ObecjtId,
     name: req.body.name1,
     phone: req.body.phone,
     email: req.body.email1,
@@ -81,21 +81,31 @@ app.post('/contact', (req, res) => {
 });
 
 app.post("/update", function(req, res) {
-  const day = date.getDate();
-  const dayString = date.getDateAsString();
 
-  const currentDateString= dayString;
   const reformdate = req.body.reformdate;
-  console.log(reformdate);
+  const customerName= req.body.name;
 
-    const contactReform = ContactFormTable.findOne(reformdate, function(err) {
-        console.log("Successfully deleted checked item.");
-        res.redirect("/data-table-view");
-    });
-    contactReform.save();
+
+  console.log(req.body);
+  console.log(customerName);
+
+  ContactFormTable.findOneAndUpdate({_id: req.body.dataBaseId}, { $set: { reformdate: reformdate }}, function(err, foundContactList){
+    console.log(foundContactList);
+    console.log("update");
+  })
+res.redirect("/data-table-view");
+    /*const contactReform = ContactFormTable.find({reformdate}, function(err, foundContactList) {
+      //console.log(contactReform);
+      res.render("data-tables", {
+        contactList: foundContactList
+      });
+      res.sendFile(__dirname + "/elements-data-tables.html");
+    }).sort({name: 1});*/
+
 
 
 });
+
 
 
 
