@@ -949,21 +949,96 @@
               <th>Phone</th>
               <th>Message</th>
               <th>Reform Date</th>
+              <th>Güncelle</th>
             </tr>
           </thead>
           <tbody>
             <% contactList.forEach(function(contact) { %>
             <tr>
+
               <th> <%= contact.currentDateString %> </th>
               <th> <%= contact.name %> </th>
               <th> <%= contact.email %> </th>
               <th> <%= contact.phone %> </th>
               <th> <%= contact.message %> </th>
-              <th> <%= contact.reformdate %>
+              <th><%= contact.reformdate%></th>
+
+              <!-- Button trigger modal -->
+              <th>
+                <form id="form1_<%= contact._id %>" action="/refresh" method="post">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1_<%= contact._id %>">
+                    Güncelle
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal1_<%= contact._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Bilgileri Güncelle</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <input type="text" name="name" value="<%= contact.name %>">
+                          <input type="text" name="email" value="<%= contact.email %>">
+                          <input type="text" name="phone" value="<%= contact.phone %>">
+                          <input type="text" name="message" value="<%= contact.message %>">
+                          <input type="date" name="reformdate" value="<%=contact.reformdate%>">
+                          <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </th>
+
+                <% if (contact.reformdate) { %>
+                  <th>
+                <form id="form_<%= contact._id %>" action="/delete" method="post">
+
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary btn-danger" data-toggle="modal" data-target="#modal_<%= contact._id %>">
+                    Delete
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal_<%= contact._id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Silmek istediğinizden emin misiniz?</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <input name="reformdate" value="<%=contact.reformdate%>">
+                          <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Hayır</button>
+                          <button type="submit" class="btn btn-primary">Evet</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+              </th>
+
+              <% } else { %>
+              <th>
                 <form id="form_<%= contact._id %>" action="/update" method="post">
+
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_<%= contact._id %>">
-                    Güncelle
+                    Return
                   </button>
 
                   <!-- Modal -->
@@ -977,8 +1052,8 @@
                           </button>
                         </div>
                         <div class="modal-body">
+
                           <input type="date" name="reformdate" value="<%=contact.reformdate%>">
-                          <input type="text" name="name" value="<%=contact.name%>">
                           <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
                         </div>
                         <div class="modal-footer">
@@ -991,8 +1066,11 @@
 
                 </form>
               </th>
+              <%  } %>
+
             </tr>
             <% }); %>
+
 
           </tbody>
         </table>
@@ -1181,10 +1259,8 @@
       $('#dataTable').DataTable();
     });
   </script>
-
   <!-- THEME PANEL - you can remove this area The panel loading after window load for better performance. -->
   <script>
-
     $(document).ready(function() {
       'use strict'
       setTimeout(function() {

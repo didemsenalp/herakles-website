@@ -46,12 +46,15 @@ app.get("/manage-contact-informations", function(req, res) {
 
 app.get("/data-table-view", function(req, res) {
 
+
   ContactFormTable.find({}, function(err, foundContactList) {
     console.log(foundContactList);
     res.render("data-tables", {
       contactList: foundContactList
     });
-  }).sort({name: 1});
+  }).sort({
+    name: 1
+  });
 
 
 
@@ -65,7 +68,6 @@ app.post('/contact', (req, res) => {
 
 
   const contactFormInfo = new ContactFormTable({
-    _id: ObecjtId,
     name: req.body.name1,
     phone: req.body.phone,
     email: req.body.email1,
@@ -76,35 +78,87 @@ app.post('/contact', (req, res) => {
 
   });
   contactFormInfo.save();
-  res.redirect("/");
+  res.redirect("/data-table-view");
 
 });
 
 app.post("/update", function(req, res) {
 
   const reformdate = req.body.reformdate;
-  const customerName= req.body.name;
 
 
   console.log(req.body);
-  console.log(customerName);
 
-  ContactFormTable.findOneAndUpdate({_id: req.body.dataBaseId}, { $set: { reformdate: reformdate }}, function(err, foundContactList){
+
+
+  ContactFormTable.findOneAndUpdate({
+    _id: req.body.dataBaseId
+  }, {
+    $set: {
+      reformdate: reformdate
+    }
+  }, function(err, foundContactList) {
     console.log(foundContactList);
     console.log("update");
   })
-res.redirect("/data-table-view");
-    /*const contactReform = ContactFormTable.find({reformdate}, function(err, foundContactList) {
-      //console.log(contactReform);
-      res.render("data-tables", {
-        contactList: foundContactList
-      });
-      res.sendFile(__dirname + "/elements-data-tables.html");
-    }).sort({name: 1});*/
+  res.redirect("/data-table-view");
 
 
 
 });
+
+app.post("/refresh", function(req, res) {
+  const name= req.body.name;
+  const phone= req.body.phone;
+  const email= req.body.email;
+  const message= req.body.message;
+  const reformdate = req.body.reformdate;
+
+
+  console.log(req.body);
+
+
+
+  ContactFormTable.findByIdAndUpdate({
+    _id: req.body.dataBaseId
+  }, {
+    $set: {
+      name: name,
+      phone: phone,
+      email: email,
+      message: message,
+      reformdate: reformdate
+
+    }
+  }, function(err, foundContactList) {
+    console.log(foundContactList);
+    console.log("update");
+  })
+  res.redirect("/data-table-view");
+
+
+
+});
+
+app.post("/delete", function(req, res) {
+  const reformdate = req.body.reformdate;
+
+  console.log(reformdate);
+
+  ContactFormTable.findOneAndUpdate({
+    _id: req.body.dataBaseId
+  }, {
+    $set: {
+      reformdate: null
+    }
+  }, function(err, foundContactList) {
+    console.log(foundContactList);
+    console.log("update");
+  })
+  res.redirect("/data-table-view");
+
+
+})
 
 
 
