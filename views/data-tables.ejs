@@ -950,6 +950,7 @@
               <th>Message</th>
               <th>Reform Date</th>
               <th>Güncelle</th>
+              <th>Dönüş Tarihi</th>
             </tr>
           </thead>
           <tbody>
@@ -966,7 +967,7 @@
               <!-- Button trigger modal -->
               <th>
                 <form id="form1_<%= contact._id %>" action="/refresh" method="post">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1_<%= contact._id %>">
+                  <button type="button" class="btn btn-primary btn-success" data-toggle="modal" data-target="#modal1_<%= contact._id %>">
                     Güncelle
                   </button>
 
@@ -985,12 +986,12 @@
                           <input type="text" name="email" value="<%= contact.email %>">
                           <input type="text" name="phone" value="<%= contact.phone %>">
                           <input type="text" name="message" value="<%= contact.message %>">
-                          <input type="date" name="reformdate" value="<%=contact.reformdate%>">
+                          <input type="date" placeholder="date" id="date" onfocus="(this.type='date')" name="reformdate" value="<%=contact.reformdate.toString("dd.MM.yyyy")%>">
                           <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
                         </div>
                         <div class="modal-footer">
-                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                          <button type="submit" class="btn btn-primary">Kaydet</button>
                         </div>
                       </div>
                     </div>
@@ -1004,7 +1005,7 @@
 
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary btn-danger" data-toggle="modal" data-target="#modal_<%= contact._id %>">
-                    Delete
+                    Sil
                   </button>
 
                   <!-- Modal -->
@@ -1038,7 +1039,7 @@
 
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_<%= contact._id %>">
-                    Return
+                    Dönüş Tarihi
                   </button>
 
                   <!-- Modal -->
@@ -1057,8 +1058,8 @@
                           <input type="hidden" name="dataBaseId" value="<%=contact._id%>">
                         </div>
                         <div class="modal-footer">
-                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Save changes</button>
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Çıkış</button>
+                          <button type="submit" class="btn btn-primary">Kaydet</button>
                         </div>
                       </div>
                     </div>
