@@ -140,19 +140,13 @@
             <!-- End description on home -->
 
             <!-- Buttons -->
-            <div class="input-button" id="boxes">
+            <div class="input-button" >
               <!-- Button -->
-
-              <form class="" action="/index.html" method="post">
-                <input type="number" name="box-number" placeholder="Kutu numarası seç." value="" min="1" max="8">
-                <button id="1" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="(this.id)">Göster</button>
-                <button id="2" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="(this.id)">Gizle</button>
-                <button id="3" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="(this.id)">Hepsini Göster</button>
-                <button id="4" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="(this.id)">Hepsini Gizle</button>
-
-
-
-              </form>
+                <input type="number" id="boxes" name="box-number" placeholder="Kutu numarası seç." value="" min="1" max="8">
+                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gosterButtonClicked()">Göster</button>
+                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gizleButtonClicked()">Gizle</button>
+                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGosterButtonClicked()">Hepsini Göster</button>
+                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGizleButtonClicked()">Hepsini Gizle</button>
               <!-- Button -->
             </div>
             <!-- End buttons -->
@@ -1804,16 +1798,23 @@
   <script src="/content/herakles/js/plugins.js?v=3"></script>
 
   <script type="text/javascript">
-  var reply_click = function()
-  {
-      alert("Button clicked, id "+this.id+", text"+this.innerHTML);
+  function gosterButtonClicked(){
+    $(this).parent().attr('#boxes')
+    console.log("gosterButtonClicked");
   }
-  document.getElementById('1').onclick = reply_click;
-  document.getElementById('2').onclick = reply_click;
-  document.getElementById('3').onclick = reply_click;
-  document.getElementById('4').onclick = reply_click;
-  </script>
+  function gizleButtonClicked(){
+    console.log("gizleButtonClicked");
+  }
+  function hepsiniGosterButtonClicked(){
 
+    console.log("hepsiniGosterButtonClicked");
+  }
+  function hepsiniGizleButtonClicked(){
+    console.log("hepsiniGizleButtonClicked");
+  }
+
+
+  </script>
   <!-- END JS FILES -->
 
   <!-- THEME PANEL - you can remove this area The panel loading after window load for better performance. -->
