@@ -269,16 +269,16 @@
   <!-- Start about section -->
   <section id="about" class="bg-gradient pb-150 pt-100 relative">
     <!-- Container for boxes -->
-    <div class="container">
+    <div class="container" id="allDiv">
       <!-- Row for boxes -->
       <div class="row t-left">
 
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div1">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">01</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Personal Trainer</h2>
             <!-- Desc -->
@@ -291,7 +291,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div2">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">02</div>
           <div class="relative zi-1">
@@ -311,10 +311,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div3">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">03</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Group Sessions</h2>
             <!-- Desc -->
@@ -327,10 +327,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div4">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">04</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Latin dances</h2>
             <!-- Desc -->
@@ -343,10 +343,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div5">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">05</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Classic club member</h2>
             <!-- Desc -->
@@ -359,10 +359,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div6">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">06</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Martial arts</h2>
             <!-- Desc -->
@@ -375,10 +375,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div7">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">07</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">swimming lessons</h2>
             <!-- Desc -->
@@ -391,10 +391,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div8">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">08</div>
-          <div class="relative zi-1">
+          <div class="relative zi-1" >
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Tennis club</h2>
             <!-- Desc -->
@@ -1798,20 +1798,33 @@
   <script src="/content/herakles/js/plugins.js?v=3"></script>
 
   <script type="text/javascript">
+
   function gosterButtonClicked(){
-    $(this).parent().attr('#boxes')
     console.log("gosterButtonClicked");
-  }
+      var inputString = $("#boxes").val();
+      alert(inputString);
+      $("#div"+ inputString).show();
+
+            };
+
   function gizleButtonClicked(){
     console.log("gizleButtonClicked");
-  }
-  function hepsiniGosterButtonClicked(){
+    var inputString = $("#boxes").val();
+      $("#div" + inputString).hide();
+          };
 
+  function hepsiniGosterButtonClicked(){
     console.log("hepsiniGosterButtonClicked");
-  }
+    var inputString = $("#boxes").val();
+      $("#allDiv").show();
+          };
+
   function hepsiniGizleButtonClicked(){
     console.log("hepsiniGizleButtonClicked");
-  }
+    var inputString = $("#boxes").val();
+      $("#allDiv").hide();
+          };
+
 
 
   </script>
