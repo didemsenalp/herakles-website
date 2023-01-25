@@ -1712,6 +1712,11 @@
 
   <script type="text/javascript">
 
+    $(document).ready(function() {
+      $("#hepsiniGosterButton").hide();
+      $("#gösterButton").hide();
+    });
+
     function gosterButtonClicked() {
       console.log("gosterButtonClicked");
       var istenilenDiv = $("#boxes").val();
@@ -1748,15 +1753,15 @@
     };
 
     function isElementVisibleById(id) {
-      var element = $("#"+id);
+      var element = $("#" + id);
       var isVisible = $(element).is(":visible");
       console.log(id);
       return isVisible;
     }
 
     function isElementHiddenById(id) {
-      var element = $("#"+id);
-     var isHidden= $(element).is(":hidden");
+      var element = $("#" + id);
+      var isHidden = $(element).is(":hidden");
       console.log(id);
       return isHidden;
     }
@@ -1777,38 +1782,38 @@
       }
     };
 
-    function sumThreeNumber(num1,num2,num3)
-    {
-      var validationResult = validateSumThreeFunctionParemeters(num1,num2,num3);
-      if(validationResult.result)
-          return num1+num2+num3;
+    function sumThreeNumber(num1, num2, num3) {
+      var validationResult = validateSumThreeFunctionParemeters(num1, num2, num3);
+      if (validationResult.result)
+        return num1 + num2 + num3;
       else {
         return validationResult;
       }
     }
-    function validateSumThreeFunctionParemeters(num1,num2,num3){
+
+    function validateSumThreeFunctionParemeters(num1, num2, num3) {
       var validationResult = true;
       var validationMessage = "";
 
-      if(isNaN(num1))
-      {
+      if (isNaN(num1)) {
         validationResult = false;
-        validationMessage =validationMessage + " num1 sayı değil";
+        validationMessage = validationMessage + " num1 sayı değil";
       }
-      if(isNaN(num2))
-      {
+      if (isNaN(num2)) {
         validationResult = false;
         validationMessage = validationMessage + " num2 sayı değil";
       }
-      if(isNaN(num3))
-      {
+      if (isNaN(num3)) {
         validationResult = false;
-        validationMessage = validationMessage +" num3 sayı değil";
+        validationMessage = validationMessage + " num3 sayı değil";
       }
-      if(validationResult)
+      if (validationResult)
         validationMessage = "Tüm parametreler doğru";
 
-      return {result:validationResult,message:validationMessage};
+      return {
+        result: validationResult,
+        message: validationMessage
+      };
     }
   </script>
   <!-- END JS FILES -->
