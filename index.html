@@ -255,7 +255,7 @@
       <!-- Row for boxes -->
       <div class="row t-left">
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div1">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div1">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">01</div>
           <div class="relative zi-1">
@@ -271,7 +271,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div2">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div2">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">02</div>
           <div class="relative zi-1">
@@ -291,7 +291,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div3">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div3">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">03</div>
           <div class="relative zi-1">
@@ -307,7 +307,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div4">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div4">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">04</div>
           <div class="relative zi-1">
@@ -323,7 +323,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div5">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div5">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">05</div>
           <div class="relative zi-1">
@@ -339,7 +339,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div6">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div6">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">06</div>
           <div class="relative zi-1">
@@ -355,7 +355,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div7">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div7">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">07</div>
           <div class="relative zi-1">
@@ -371,7 +371,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div8">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative showDiv" id="div8">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">08</div>
           <div class="relative zi-1">
@@ -1714,16 +1714,16 @@
 
     function gosterButtonClicked() {
       console.log("gosterButtonClicked");
-      var inputString = $("#boxes").val();
-      $("#div" + inputString).show();
+      var istenilenDiv = $("#boxes").val();
+      $("#div" + istenilenDiv).show();
 
 
     };
 
     function gizleButtonClicked() {
       console.log("gizleButtonClicked");
-      var inputString = $("#boxes").val();
-      $("#div" + inputString).hide();
+      var istenilenDiv = $("#boxes").val();
+      $("#div" + istenilenDiv).hide();
     };
 
     function hepsiniGosterButtonClicked() {
@@ -1731,13 +1731,13 @@
 
       var isVisible = isElementVisibleById("allDiv");
       console.log(isVisible);
-      var inputString = $("#boxes").val();
+      var istenilenDiv = $("#boxes").val();
 
-      if (isVisible === false) {
-        $("#allDiv").show();
+      if (isVisible) {
+        $(".showDiv").show();
         $("#hepsiniGosterButton").hide();
         $("#hepsiniGizleButton").show();
-        $("#div" + inputString).show();
+        $("#div" + istenilenDiv).show();
         alert("Hepsi gösterildi!")
       } else {
         $("#hepsiniGosterButton").show();
@@ -1764,7 +1764,7 @@
       var isHidden = isElementHiddenById("allDiv");
       console.log(isHidden);
       if (isHidden === false) {
-        $("#allDiv").hide();
+        $(".showDiv").hide();
         $("#hepsiniGizleButton").hide();
         $("#hepsiniGosterButton").show();
         alert("Hepsi başarılı bir şekilde gizlendi!");
