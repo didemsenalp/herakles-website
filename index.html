@@ -101,15 +101,6 @@
   </nav>
   <!-- End Navigation -->
 
-
-
-
-
-
-
-
-
-
   <!-- Start home section -->
   <section id="home" class="home height-95vh mnh-700 mxh-1100 bg-gradient1 relative zi-5">
 
@@ -140,13 +131,13 @@
             <!-- End description on home -->
 
             <!-- Buttons -->
-            <div class="input-button" >
+            <div class="input-button">
               <!-- Button -->
-                <input type="number" id="boxes" name="box-number" placeholder="Kutu numarası seç." value="" min="1" max="8">
-                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gosterButtonClicked()">Göster</button>
-                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gizleButtonClicked()">Gizle</button>
-                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGosterButtonClicked()">Hepsini Göster</button>
-                <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGizleButtonClicked()">Hepsini Gizle</button>
+              <input type="number" id="boxes" name="box-number" placeholder="Kutu numarası seç." value="" min="1" max="8">
+              <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gosterButtonClicked()">Göster</button>
+              <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gizleButtonClicked()">Gizle</button>
+              <button id="hepsiniGosterButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGosterButtonClicked()">Hepsini Göster</button>
+              <button id="hepsiniGizleButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGizleButtonClicked()">Hepsini Gizle</button>
               <!-- Button -->
             </div>
             <!-- End buttons -->
@@ -257,28 +248,17 @@
   </section>
   <!-- End home section -->
 
-
-
-
-
-
-
-
-
-
   <!-- Start about section -->
   <section id="about" class="bg-gradient pb-150 pt-100 relative">
     <!-- Container for boxes -->
     <div class="container" id="allDiv">
       <!-- Row for boxes -->
       <div class="row t-left">
-
-
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div1">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div1">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">01</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Personal Trainer</h2>
             <!-- Desc -->
@@ -291,7 +271,7 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div2">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div2">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">02</div>
           <div class="relative zi-1">
@@ -311,10 +291,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div3">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div3">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">03</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Group Sessions</h2>
             <!-- Desc -->
@@ -327,10 +307,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div4">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div4">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">04</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Latin dances</h2>
             <!-- Desc -->
@@ -343,10 +323,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div5">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div5">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">05</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Classic club member</h2>
             <!-- Desc -->
@@ -359,10 +339,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div6">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div6">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">06</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Martial arts</h2>
             <!-- Desc -->
@@ -375,10 +355,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div7">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div7">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">07</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">swimming lessons</h2>
             <!-- Desc -->
@@ -391,10 +371,10 @@
         <!-- End box col -->
 
         <!-- Box col -->
-        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative" id="div8">
+        <div class="col-lg-4 col-md-6 col-12 mt-90 mt-50-sm relative show-id" id="div8">
           <!-- lg numbers -->
           <div class="fs-90 fs-60-sm font-secondary colored1 opacity-1 top-0 zi-0 absolute extrabold unselectable pointer-events-none">08</div>
-          <div class="relative zi-1" >
+          <div class="relative zi-1">
             <!-- Subtitle -->
             <h2 class="fs-28 colored1 font-secondary uppercase mt-15">Tennis club</h2>
             <!-- Desc -->
@@ -466,13 +446,6 @@
     <!-- End SVG circles -->
   </section>
   <!-- End about section -->
-
-
-
-
-
-
-
 
   <!-- Content section -->
   <section id="/content-5912845" class="py-150 bg-gradient1 relative">
@@ -699,12 +672,6 @@
   </section>
   <!-- End content section -->
 
-
-
-
-
-
-
   <!-- Services section -->
   <section id="services" class="py-150 bg-gradient relative">
 
@@ -906,15 +873,6 @@
 
   </section>
   <!-- End services section -->
-
-
-
-
-
-
-
-
-
 
   <!-- Faq section -->
   <section id="faq" class="bg-gradient1 pt-100-sm relative">
@@ -1136,15 +1094,6 @@
 
   </section>
   <!-- End faq section -->
-
-
-
-
-
-
-
-
-
 
   <section id="gallery" class="bg-gradient py-150 relative">
 
@@ -1400,13 +1349,6 @@
   <!-- End gallery section -->
 
 
-
-
-
-
-
-
-
   <section id="contact" class="bg-gradient1 py-150 relative">
 
     <!-- Container for title -->
@@ -1550,13 +1492,6 @@
   </section>
   <!-- End contact section -->
 
-
-
-
-
-
-
-
   <!-- Map section -->
   <div id="map-section" class="relative fullwidth">
 
@@ -1656,15 +1591,6 @@
   </div>
   <!-- End map section -->
 
-
-
-
-
-
-
-
-
-
   <!-- Footer -->
   <footer id="footer" class="pt-80 bg-gradient1 relative">
     <!-- Container in footer -->
@@ -1734,11 +1660,6 @@
   </footer>
   <!-- End footer -->
 
-
-
-
-
-
   <!-- Cookie template static version - you only need add .cookie class to #cookie_notification... div - you can remove .ct class. -->
   <div id="cookie__notification_11_51236" class="cookie fixed bottom-30 right-30 right-0-sm px-15-sm fullwidth t-right pointer-events-none" data-expire="15">
     <div class="mxw-450 fullwidth radius-md bg-white bs-xl pt-30 px-15 pb-15 t-center d-inline-block pointer-events-all">
@@ -1754,14 +1675,10 @@
   <!-- End cookie template static version -->
 
 
-
-
-
   <!-- Back To Top -->
   <a id="back-to-top" href="#top" class="btt circle width-60 width-50-sm height-60 height-50-sm bg-white b-1 b-gray2 gray7">
     <i class="ti-angle-up fs-18"></i>
   </a>
-
 
   <!-- SEARCH FORM FOR NAV -->
   <div class="fs-searchform d-flex align-items-center justify-content-center">
@@ -1782,10 +1699,6 @@
   </div>
   <!-- END SEARCH FORM -->
 
-
-
-
-
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="//index.js" charset="utf-8"></script>
@@ -1799,34 +1712,101 @@
 
   <script type="text/javascript">
 
-  function gosterButtonClicked(){
-    console.log("gosterButtonClicked");
+    function gosterButtonClicked() {
+      console.log("gosterButtonClicked");
       var inputString = $("#boxes").val();
-      alert(inputString);
-      $("#div"+ inputString).show();
+      $("#div" + inputString).show();
 
-            };
 
-  function gizleButtonClicked(){
-    console.log("gizleButtonClicked");
-    var inputString = $("#boxes").val();
+    };
+
+    function gizleButtonClicked() {
+      console.log("gizleButtonClicked");
+      var inputString = $("#boxes").val();
       $("#div" + inputString).hide();
-          };
+    };
 
-  function hepsiniGosterButtonClicked(){
-    console.log("hepsiniGosterButtonClicked");
-    var inputString = $("#boxes").val();
-      $("#allDiv").show();
-          };
+    function hepsiniGosterButtonClicked() {
+      console.log("hepsiniGosterButtonClicked");
 
-  function hepsiniGizleButtonClicked(){
-    console.log("hepsiniGizleButtonClicked");
-    var inputString = $("#boxes").val();
-      $("#allDiv").hide();
-          };
+      var isVisible = isElementVisibleById("allDiv");
+      console.log(isVisible);
+      var inputString = $("#boxes").val();
 
+      if (isVisible === false) {
+        $("#allDiv").show();
+        $("#hepsiniGosterButton").hide();
+        $("#hepsiniGizleButton").show();
+        $("#div" + inputString).show();
+        alert("Hepsi gösterildi!")
+      } else {
+        $("#hepsiniGosterButton").show();
+        alert("Hala gizli!")
+      }
+    };
 
+    function isElementVisibleById(id) {
+      var element = $("#"+id);
+      var isVisible = $(element).is(":visible");
+      console.log(id);
+      return isVisible;
+    }
 
+    function isElementHiddenById(id) {
+      var element = $("#"+id);
+     var isHidden= $(element).is(":hidden");
+      console.log(id);
+      return isHidden;
+    }
+
+    function hepsiniGizleButtonClicked() {
+      console.log("hepsiniGizleButtonClicked");
+      var isHidden = isElementHiddenById("allDiv");
+      console.log(isHidden);
+      if (isHidden === false) {
+        $("#allDiv").hide();
+        $("#hepsiniGizleButton").hide();
+        $("#hepsiniGosterButton").show();
+        alert("Hepsi başarılı bir şekilde gizlendi!");
+      } else {
+
+        alert("Zaten gizli!");
+      }
+    };
+
+    function sumThreeNumber(num1,num2,num3)
+    {
+      var validationResult = validateSumThreeFunctionParemeters(num1,num2,num3);
+      if(validationResult.result)
+          return num1+num2+num3;
+      else {
+        return validationResult;
+      }
+    }
+    function validateSumThreeFunctionParemeters(num1,num2,num3){
+      var validationResult = true;
+      var validationMessage = "";
+
+      if(isNaN(num1))
+      {
+        validationResult = false;
+        validationMessage =validationMessage + " num1 sayı değil";
+      }
+      if(isNaN(num2))
+      {
+        validationResult = false;
+        validationMessage = validationMessage + " num2 sayı değil";
+      }
+      if(isNaN(num3))
+      {
+        validationResult = false;
+        validationMessage = validationMessage +" num3 sayı değil";
+      }
+      if(validationResult)
+        validationMessage = "Tüm parametreler doğru";
+
+      return {result:validationResult,message:validationMessage};
+    }
   </script>
   <!-- END JS FILES -->
 
