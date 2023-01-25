@@ -134,8 +134,8 @@
             <div class="input-button">
               <!-- Button -->
               <input type="number" id="boxes" name="box-number" placeholder="Kutu numarası seç." value="" min="1" max="8">
-              <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gosterButtonClicked()">Göster</button>
-              <button class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gizleButtonClicked()">Gizle</button>
+              <button id="gösterButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gosterButtonClicked()">Göster</button>
+              <button id="gizleButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="gizleButtonClicked()">Gizle</button>
               <button id="hepsiniGosterButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGosterButtonClicked()">Hepsini Göster</button>
               <button id="hepsiniGizleButton" class="xl-btn bg-colored2 bg-soft-dark4-hover slow-sm white font-secondary fs-16 uppercase mr-20 mt-20" onClick="hepsiniGizleButtonClicked()">Hepsini Gizle</button>
               <!-- Button -->
@@ -1716,14 +1716,14 @@
       console.log("gosterButtonClicked");
       var istenilenDiv = $("#boxes").val();
       $("#div" + istenilenDiv).show();
-
-
+      $("#gizleButton").show();
     };
 
     function gizleButtonClicked() {
       console.log("gizleButtonClicked");
       var istenilenDiv = $("#boxes").val();
       $("#div" + istenilenDiv).hide();
+      $("#gösterButton").show();
     };
 
     function hepsiniGosterButtonClicked() {
@@ -1735,9 +1735,11 @@
 
       if (isVisible) {
         $(".showDiv").show();
+        $("#gösterButton").hide();
         $("#hepsiniGosterButton").hide();
         $("#hepsiniGizleButton").show();
         $("#div" + istenilenDiv).show();
+        $("#gizleButton").show();
         alert("Hepsi gösterildi!")
       } else {
         $("#hepsiniGosterButton").show();
@@ -1765,11 +1767,12 @@
       console.log(isHidden);
       if (isHidden === false) {
         $(".showDiv").hide();
+        $("#gösterButton").show();
+        $("#gizleButton").hide();
         $("#hepsiniGizleButton").hide();
         $("#hepsiniGosterButton").show();
         alert("Hepsi başarılı bir şekilde gizlendi!");
       } else {
-
         alert("Zaten gizli!");
       }
     };
